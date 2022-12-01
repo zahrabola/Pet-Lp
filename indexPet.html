@@ -1,3 +1,5 @@
+<!--https://www.digitalocean.com/community/tutorials/for-loops-for-of-loops-and-for-in-loops-in-javascript--->
+<!--https://www.color-name.com/powder-pink.color-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,17 +20,569 @@
       crossorigin="anonymous"
     ></script>
     <title>Animal Companion page - Zahra Olanrewaju</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .imgbody {
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* IMAGE */
+      .imgcontainer {
+        overflow-x: hidden;
+        max-width: 1268px;
+      }
+      .imgwrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 2.7rem;
+        position: relative;
+        left: 0;
+        transition: 0.3s;
+      }
+
+      img {
+        height: 320px;
+        width: auto;
+        object-fit: cover;
+        display: block;
+      }
+
+      /*text */
+
+      .square1 {
+        aspect-ratio: 1/ 1;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+        background-color: #b4a1ca;
+        color: aliceblue;
+        cursor: pointer;
+      }
+
+      .square2 {
+        aspect-ratio: 1/ 1;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+        background-color: #a9d39e;
+        color: aliceblue;
+      }
+      .square3 {
+        aspect-ratio: 1/ 1;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+        background-color: #f1d5de;
+        color: aliceblue;
+      }
+      .square4 {
+        aspect-ratio: 1/ 1;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+        background-color: #77c4fe;
+        color: aliceblue;
+      }
+      .nav-link {
+        color: #c4c3d0;
+      }
+      section {
+        margin: 20px;
+        padding: 10px;
+      }
+      .colortext {
+        aspect-ratio: 1/ 1;
+        padding: 5%;
+        background-color: #b4a1ca;
+        background-image: linear-gradient(
+          #b4a1ca,
+          #a9d39e,
+          #c4c3d0,
+          #f1d5de,
+          #77c4fe
+        );
+        color: aliceblue;
+     
+      }
+     
+      .sectionimg{
+aspect-ratio: 1 / 1;
+       padding: 5%;
+      }
+      .sect-text{
+        padding: 5%;
+      }
+     .btn {
+      border-radius: 10px;
+      background-color: #c4c3d0;
+      padding: 10px;
+      font-weight: 200;
+      color: aliceblue;
+     }
+     .linkmore{
+      color: aliceblue;
+      text-decoration: none;
+     }
+     .linkmore:hover{
+      color: black;
+     }
+
+    .linkview{
+        color: aliceblue;
+    }
+      .linkview:hover{
+      color: black;
+      text-decoration: none;
+     }
+    </style>
   </head>
   <body>
-    <!--------https://codepen.io/fajarnurwahid/pen/VwyjLRz---->
     <!-----carousel -->
-    <!--navbar-->
-    <!----information aboout anixety -->
+    <div class="imgbody">
+      <div class="imgcontainer">
+        <div class="imgwrapper">
+          <!-----dog -->
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="dogimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="dogimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1625316708582-7c38734be31d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="dogimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=694&q=80"
+              alt=""
+              id="dogimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+              alt=""
+              id="dogimg"
+            />
+          </div>
+          <!-----cats -->
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="catimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1548546738-8509cb246ed3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="catimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1513245543132-31f507417b26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+              alt=""
+              id="catimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1610973054332-47ba6d5350c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="catimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1571566882372-1598d88abd90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="catimg"
+            />
+          </div>
+          <!-----Birds -->
 
-    <!----sections for each comfort animal -->
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="birdimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1532598187460-98fe8826d1e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+              alt=""
+              id="birdimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1499995909106-2d6741de64ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="birdimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1620694563886-c3a80ec55f41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="birdimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+              alt=""
+              id="birdimg"
+            />
+          </div>
+          <!-----Fish -->
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=694&q=80"
+              alt=""
+              id="fishimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1604859347436-2e6925be8176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+              alt=""
+              id="fishimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1538719501547-bc023056a8b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=696&q=80"
+              alt=""
+              id="fishimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1618419125747-ee5a210c6ebe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              id="fishimg"
+            />
+          </div>
+          <div class="cardimg img-fluid">
+            <img
+              src="https://images.unsplash.com/photo-1540996772485-94e7e92bc1f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=677&q=80"
+              alt=""
+              id="fishimg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!----https://nicepage.com/html-templates/preview/well-trained-dog-1176472?device=desktop-->
+    <div class="container p-2">
+      <div class="row">
+        <!--navbar-->
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#anxiety"
+              >Anxiety</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#dog">Dogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cat">Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bird">Birds</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fish">Fish</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#depression"
+              >Depression
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!---what is animal therapy-->
+      <div class="px-2 py-2 my-5 text-center">
+    <h1 class="display-5 fw-bold">Animal Therapy </h1>
+    <div class="col-lg-6 mx-auto">
+      <h6 class="display-6 " id="F-name">[Name],<p class="lead mb-4">This webpage is designed to promote improvement in human physical, social, emotional, or cognitive function.</p></h6>
+     <p class="lead mb-4">Animal therapy or pet therapy refers to the use of animals as a way to help people cope with and recover from some physical and mental health conditions.</p>
+       <p class="lead mb-4">Developing a bond with an animal can help people develop a better sense of self-worth and trust, stabilize their emotions, and improve their communication, self-regulation, and socialization skills.</p>
+     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-lg px-4 gap-3"><a class="linkmore"href="https://www.medicalnewstoday.com/articles/animal-therapy">More Information</a></button>
+        <button type="button" class="btn btn-lg ">Subscribe</button>
+      </div>
+    </div>
+  </div>
+      <!----information aboout anixety -->
+      <div class="row justify-content-evenly mt-3" id="anxiety">
+        <div class="col-md-5 border p-3">text info about anixety</div>
+        <div class="col-md-5">
+          <div class="row justify-content-evenly">
+            <div class="col-sm-5 p-2" id="smooth-1">
+              <div
+                class="square1"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title=" Purple hues are known to signify strength, peace and wisdom."
+              >
+                Powdered Pink
+              </div>
+            </div>
+            <div class="col-sm-5 p-2">
+              <div
+                class="square4"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Blue can calm your mind, slow your heart rate and lower your blood pressure, 
+                in turn reducing anxiety."
+              >
+                Sky Blue
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-----carousel -->
+      <!----sections for each comfort animal -->
+      <!---Dog-->
+      <section>
+        <div class="row" id="dog">
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1558929996-da64ba858215?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80" class="img-fluid sectionimg"></div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6 border colortext">
+                <h6>Dog Therapy</h6>
+                <p>
+                 Dogs are naturally attentive, loving, and have the capacity to be taught skills that can reduce anxiety and depression further.
+                </p>
+                       <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
+              </div>
+              <div class="col-sm-6 sect-text"><h6>What We Do</h6>
+              <p>
+                A therapy dog helps performs tasks for their owner to help reduce or manage symptoms of anxiety and depression. 
+                </p></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 sect-text">  <h6>How It Work</h6>
+                <p>
+                  Daily care for a dog requires feeding, watering, and providing mental and physical enrichment. 
+                </p></div>
+              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
+                <p>
+                Training is often a daily task when the dog is young or learning,
+                 training is a great way to provide mental enrichment and bond with your dog.
+                </p>
+                          <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!---Cat-->
+         <section>
+        <div class="row" id="cat">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6 border colortext">
+                <h6>Cat Therapy</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p>
+                            <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
+              </div>
+              <div class="col-sm-6 sect-text"><h6>What We Do</h6>
+              <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 sect-text">  <h6>How It Work</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p></div>
+              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p>
+                              <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1448222993383-a2fff2914d27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80" class="img-fluid sectionimg"></div>
+      </section>
+       <!---Birds-->
+        <section>
+        <div class="row" id="bird">
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1556034910-086856682d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="img-fluid sectionimg"></div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6 border colortext">
+                <h6>Bird Therapy</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p>
+                          <p><a href="">View More</a></p>
+              </div>
+              <div class="col-sm-6 sect-text"><h6>What We Do</h6>
+              <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 sect-text">  <h6>How It Work</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p></div>
+              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p>
+                          <p><a href="">View More</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!---Fish-->
+          <section>
+        <div class="row" id="fish">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6 border colortext">
+                <h6>Fish Therapy</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p>
+                          <p><a href="">View More</a></p>
+              </div>
+              <div class="col-sm-6 sect-text"><h6>What We Do</h6>
+              <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 sect-text">  <h6>How It Work</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p></div>
+              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
+                <p>
+                  Sample text. Click to select the text box. Click again or
+                  double click to start editing the text.
+                </p>
+                <p><a href="">View More</a></p>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1573472420143-0c68f179bdc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80" class="img-fluid sectionimg"></div>
+      </section>
+      <!----information aboout depression -->
+      <div class="row justify-content-evenly" id="depression">
+        <div class="col-md-5">
+          <div class="row justify-content-evenly">
+            <div class="col-sm-5 p-2" id="smooth-1">
+              <div
+                class="square3"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Pinks can stir feelings of compassion, nurture and love, especially in the softer,
+                 lighter variations which are linked to tenderness and empathy."
+              >
+                Soothing Lavender
+              </div>
+            </div>
+            <div class="col-sm-5 p-2">
+              <div
+                class="square2"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Green is a restful and nurturing tone.
+  We associate it directly with nature and the lush outdoors,
+  and being in nature is proven to improve mood, 
+  cognition and health."
+              >
+                Pistachio Green
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 border p-3">text info about Depression</div>
+      </div>
+
+      <!----https://nicepage.com/html-templates/preview/well-trained-dog-1176472?device=desktop-->
+      <!--get help-->
+      <!-----carousel -->
+    </div>
+
+    <script>
+      const imageWrap = document.querySelector(".imgwrapper");
+      const imgItems = document.querySelectorAll(".imgwrapper > * ");
+      const imgLength = imgItems.length;
+      const perView = 5;
+      let totalScroll = 0;
+      const delay = 2200;
+
+      imageWrap.style.setProperty("-per-view", perView);
+      ///loop
+      for (let i = 0; i < perView; i++) {
+        imageWrap.insertAdjacentHTML("beforeend", imgItems[i].outerHTML);
+      }
+
+      let autoScroll = setInterval(scrolling, delay);
+
+      function scrolling() {
+        totalScroll++;
+        if (totalScroll == imgLength + 1) {
+          clearInterval(autoScroll);
+          totalScroll = 1;
+          imageWrap.style.transition = "0s";
+          imageWrap.style.left = "0";
+          autoScroll = setInterval(scrolling, delay);
+        }
+        const widthImg =
+          document.querySelector(".imgwrapper > :first-child").offsetWidth + 43;
+        imageWrap.style.left = `-${totalScroll * widthImg}px`;
+        imageWrap.style.transition = ".3s";
+      }
+    </script>
   </body>
 </html>
