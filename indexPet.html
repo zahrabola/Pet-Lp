@@ -54,6 +54,29 @@
         object-fit: cover;
         display: block;
       }
+.dogimg:hover {
+    -ms-transform: scale(1.15); 
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); 
+  }
+.catimg:hover {
+    -ms-transform: scale(1.15); 
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); 
+    
+  }
+  .birdimg:hover {
+    -ms-transform: scale(1.15); 
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); 
+    
+  }
+  .fishimg:hover {
+    -ms-transform: scale(1.15); 
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); 
+    
+  }
 
       /*text */
 
@@ -102,6 +125,10 @@
       .nav-link {
         color: #c4c3d0;
       }
+      .nav-link:hover{
+        color: black;
+     }
+
       section {
         margin: 20px;
         padding: 10px;
@@ -119,6 +146,23 @@
         );
         color: aliceblue;
      
+      }
+
+      .col-text1, .col-text2{
+        cursor: pointer;
+      }
+      .col-text1:hover, .col-text2:hover{
+     color: black;
+      transition-timing-function: ease-in-out;
+ -ms-transition-timing-function: ease-in-out;
+ -moz-transition-timing-function: ease-in-out;
+ -webkit-transition-timing-function: ease-in-out;
+ -o-transition-timing-function: ease-in-out;
+ transition-duration: 0.4s;
+ -ms-transition-duration: 0.4s;
+ -moz-transition-duration: 0.4s;
+ -webkit-transition-duration: 0.4s;
+ -o-transition-duration: 0.4s;
       }
      
       .sectionimg{
@@ -150,6 +194,7 @@ aspect-ratio: 1 / 1;
       color: black;
       text-decoration: none;
      }
+     
     </style>
   </head>
   <body>
@@ -388,12 +433,12 @@ aspect-ratio: 1 / 1;
       <!---Dog-->
       <section>
         <div class="row" id="dog">
-          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1558929996-da64ba858215?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80" class="img-fluid sectionimg"></div>
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1558929996-da64ba858215?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80" class="img-fluid sectionimg dogimg"></div>
           <div class="col-lg-6">
             <div class="row">
               <div class="col-sm-6 border colortext">
-                <h6>Dog Therapy</h6>
-                <p>
+                <h6 class="col-text1">Dog Therapy</h6>
+                <p class="col-text2">
                  Dogs are naturally attentive, loving, and have the capacity to be taught skills that can reduce anxiety and depression further.
                 </p>
                        <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
@@ -408,8 +453,8 @@ aspect-ratio: 1 / 1;
                 <p>
                   Daily care for a dog requires feeding, watering, and providing mental and physical enrichment. 
                 </p></div>
-              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
-                <p>
+              <div class="col-sm-6 border colortext">   <h6 class="col-text1">Skills For Lifeftime!</h6>
+                <p class="col-text2">
                 Training is often a daily task when the dog is young or learning,
                  training is a great way to provide mental enrichment and bond with your dog.
                 </p>
@@ -424,8 +469,8 @@ aspect-ratio: 1 / 1;
           <div class="col-lg-6">
             <div class="row">
               <div class="col-sm-6 border colortext">
-                <h6>Cat Therapy</h6>
-                <p>
+                <h6 class="col-text1">Cat Therapy</h6>
+                <p class="col-text2">
                  Cats are wonderful companions who offer unconditional love, petting them for 10 minutes can also reduce your stress levels.
                 </p>
                             <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
@@ -440,25 +485,25 @@ aspect-ratio: 1 / 1;
                 <p>
                 Cats do tend to be one of the more independent pets, but positive reinforcement training is a fun activity that provides mental enrichment 
                 </p></div>
-              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
-                <p>
+              <div class="col-sm-6 border colortext">   <h6 class="col-text1">Skills For Lifeftime!</h6>
+                <p class="col-text2">
                  A cat’s purr is between 25 and 150Hz. The frequency of this vibration may be able to help people suffering from breathing difficulties, which is a relatively common symptom of anxiety.
                 </p>
                               <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
             </div>
           </div>
         </div>
-          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1448222993383-a2fff2914d27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80" class="img-fluid sectionimg"></div>
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1448222993383-a2fff2914d27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80" class="img-fluid sectionimg catimg"></div>
       </section>
        <!---Birds-->
         <section>
         <div class="row" id="bird">
-          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1556034910-086856682d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="img-fluid sectionimg"></div>
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1556034910-086856682d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="img-fluid sectionimg birdimg"></div>
           <div class="col-lg-6">
             <div class="row">
               <div class="col-sm-6 border colortext">
-                <h6>Bird Therapy</h6>
-                <p>
+                <h6 class="col-text1">Bird Therapy</h6>
+                <p class="col-text2"> 
                 Bird watching is essentially an act of mindfulness, hearing birds, seeing them, and having ordinary encounters with birds improved the mood of people who have anxiety and depression.
                 </p>
                             <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
@@ -473,8 +518,8 @@ aspect-ratio: 1 / 1;
                 <p>
             Owening a bird like a parrots that can mimic human speech makes them a lot of fun to interact with, which can help reduce loneliness.
                 </p></div>
-              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
-                <p>
+              <div class="col-sm-6 border colortext">   <h6 class="col-text1">Skills For Lifeftime!</h6>
+                <p class="col-text2">
                   Birds are intelligent, engaging, and trainable. They are social and enjoy spending time with their owners.They can sense stress and tension, anger and distress in their owners.
                 </p>
                           <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
@@ -488,8 +533,8 @@ aspect-ratio: 1 / 1;
           <div class="col-lg-6">
             <div class="row">
               <div class="col-sm-6 border colortext">
-                <h6>Fish Therapy</h6>
-                <p>
+                <h6 class="col-text1">Fish Therapy</h6>
+                <p class="col-text2">
           Fish improved peoples’ moods and helped them feel more relaxed and less anxious.
            While watching aquariums, individuals’ blood pressure and heart rates tend to lower. 
                 </p>
@@ -505,15 +550,15 @@ aspect-ratio: 1 / 1;
                 <p>
                 The process of cleaning and maintaining fish tanks is a good way to get exercise. You have to lift equipment, clean tanks, and maintain the overall health of your fish population. All of these activities will help you stay active.
                 </p></div>
-              <div class="col-sm-6 border colortext">   <h6>Skills For Lifeftime!</h6>
-                <p>
+              <div class="col-sm-6 border colortext">   <h6 class="col-text1">Skills For Lifeftime!</h6>
+                <p class="col-text2">
                  Keeping fish as pets can also help to promote social interaction and communication. This is because fish are excellent as companions for both adults and children. Moreover, fish can help us feel calmer and more relaxed by reducing blood pressure and heart rate.
                 </p>
                <p><a class="linkview" href="https://usserviceanimals.org/blog/best-pets-for-anxiety/">View More</a></p>
             </div>
           </div>
         </div>
-          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1573472420143-0c68f179bdc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80" class="img-fluid sectionimg"></div>
+          <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1573472420143-0c68f179bdc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80" class="img-fluid sectionimg fishimg"></div>
       </section>
       <!----information aboout depression -->
       <div class="row justify-content-evenly mt-3 mb-3" id="depression">
@@ -580,6 +625,7 @@ aspect-ratio: 1 / 1;
        <hr class="my-4">
        <p class="text-center"> 
           <small class="text-muted">Code by Zahra Olanrewaju </small>
+                 <small class="text-muted"><a href=""></a></small>
        </p>
         
     </div>
